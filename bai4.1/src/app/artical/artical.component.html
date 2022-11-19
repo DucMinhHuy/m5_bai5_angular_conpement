@@ -1,0 +1,51 @@
+<!--<p>artical works!</p>-->
+<!--<h2>today artical:</h2>-->
+<!--<hr>-->
+<!--<div>-->
+<!--  <a href="{{artical.url}}" target="_blank">{{artical.title}}</a>-->
+<!--</div>-->
+<!--<hr>-->
+<!--@minhhuy 1999-->
+<!--<br>-->
+<!--<br>-->
+<!--<div>-->
+<!--  <h2>minh huy:</h2>-->
+<!--  <table>-->
+<!--    <tr>-->
+<!--      <td>title :</td>-->
+<!--      <td><textarea [(ngModel)]="artical.title" cols="70"></textarea></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>url :</td>-->
+<!--      <td><textarea [(ngModel)]="artical.url" cols="70"></textarea></td>-->
+<!--    </tr>-->
+<!--  </table>-->
+<!--</div>-->
+<!--@ minhhuy1999-->
+
+<div *ngFor="let art of artical">
+  <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+</div>
+<div>
+  <h2>Article Information</h2>
+  <table>
+    <tr>
+      <td>Title:</td>
+      <td><textarea [(ngModel)]="articels.title" cols="70"></textarea></td>
+    </tr>
+    <tr>
+      <td>Url:</td>
+      <td>
+        <textarea [(ngModel)]="articels.url" cols="70"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button style="float: right" (click)="addNewartical()">Add</button></td>
+    </tr>
+  </table>
+</div>
+{{like}} likes. <button (click)="likeThis()">Like</button>
+<div *ngFor="let art of artical">
+  <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+</div>
